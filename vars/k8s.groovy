@@ -1,3 +1,3 @@
-def helm_upgrade(chart){
-  sh 'helm upgrade --install ${chart} --set image.tag=${BUILD_NUMBER} ./helm/${chart}'
+def helm_upgrade(){
+  sh 'helm upgrade --install ${HELMCHART_NAME} --set image.tag=${BUILD_NUMBER} ./helm/${HELMCHART_NAME}'
 }
